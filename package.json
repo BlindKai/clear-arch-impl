@@ -1,0 +1,22 @@
+{
+  "name": "clear-architecture-implementation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start",
+    "build": "rm -r lib & tsc",
+    "dev": "tsc-watch --onSuccess \"pm2 restart all\"",
+    "clear": "pm2 delete all",
+    "test": "jest --silent lib/spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
