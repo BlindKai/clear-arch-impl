@@ -1,4 +1,4 @@
-const { DB_HOST, DB_NAME, DB_USER, DB_PASS } = process.env;
+const { DB_HOST, DB_NAME, DB_USER, DB_PASS, TEST_DB_NAME, TEST_DB_USER, TEST_DB_PASS } = process.env;
 
 type config = { [column: string]: object };
 
@@ -13,9 +13,9 @@ const config = {
 };
 
 const testConfig = {
-  database: "counters_v2_test",
-  user: "test",
-  password: "test",
+  database: TEST_DB_NAME,
+  user: TEST_DB_USER,
+  password: TEST_DB_PASS,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
